@@ -1,0 +1,42 @@
+<ion-menu id="myMenu" [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item  (click)="openPageSucre()">
+       <img src="assets/images/sucre.png" width="20">
+       Sucré
+       
+      </button>
+
+       <button menuClose ion-item  (click)="openPageSale()">
+           <img src="assets/images/sale.png" width="20">
+       Salé 
+      </button>
+
+           <button menuClose ion-item  (click)="openPageGateau()">
+              <img src="assets/images/gateau.png" width="20">
+       Gateau 
+      </button>
+
+       <button menuClose ion-item  (click)="openPageAbout()">
+          <img src="assets/images/about.png">
+        A Propos
+      </button>
+
+<button menuClose ion-item  (click)="openPageContact()">
+        <ion-icon name="call"></ion-icon>
+        Contact
+      </button>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
